@@ -22,6 +22,16 @@ spring:
           predicates:
             - Path=/users/**
 
+        - id: sales-microservice
+          uri: lb://sales-microservice
+          predicates:
+            - Path=/sales/**
+
+        - id: product-microservice
+          uri: lb://product-microservice
+          predicates:
+            - Path=/product/**
+
 
 eureka:
   client:
