@@ -32,6 +32,11 @@ spring:
           predicates:
             - Path=/product/**
 
+        - id: delivery-microservice
+          uri: lb://delivery-microservice
+          predicates:
+            - Path=/delivery/**
+
 
 eureka:
   client:
